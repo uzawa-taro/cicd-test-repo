@@ -1,0 +1,16 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<a th:href="@{index}">戻る</a>
+<h1>図書新規登録</h1>
+<form th:action="@{add}" method="post">
+    <label for="bookName">図書名：</label>
+    <input type="text" id="bookName" name="bookName" th:value="${book.bookName}"/><br>
+    <label for="bookPages">ページ数：</label>
+    <input type="text" id="bookPages" name="bookPages" th:value="${book.bookPages}"/><br>
+    <button type="submit" id="submit">登録</button>
+    <br>
+</form>
+</body>
+</html>

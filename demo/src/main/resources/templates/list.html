@@ -1,0 +1,24 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+<a th:href="@{index}">戻る</a>
+<h1>図書一覧</h1>
+<table>
+    <thead>
+    <tr>
+        <th>図書ID</th>
+        <th>図書名</th>
+        <th>ページ数</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book : ${bookList.books}">
+        <td th:text="${book.bookId}"></td>
+        <td th:text="${book.bookName}"></td>
+        <td th:text="${book.bookPages}"></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>
